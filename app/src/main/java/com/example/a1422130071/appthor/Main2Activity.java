@@ -20,7 +20,9 @@ public class Main2Activity extends AppCompatActivity {
     EditText edtData;
     Button   btAdd,btnFoto;
 
-
+    FirebaseDatabase database;
+    DatabaseReference alunos;
+    FirebaseAuth auth = FirebaseAuth.getInstance();
             ; // autenticação de usuario
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,27 +63,20 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     private  void gravar(){
-        // Pegando a instancia e a referencia da base de dados do firebase
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-        // Pegando a referencia da raiz Alunos do banco de dados
-        DatabaseReference alunos = databaseReference.child("Alunos");
-        // Pegando autenticação do usuario logado
-        FirebaseAuth auth = FirebaseAuth.getInstance();
+        String nome = edtNome.getText().toString();
+        String sexo = edtSexo.getText().toString();
+        String idade = edtData.getText().toString();
+
         // retorna o usuario logado
         FirebaseUser user = auth.getCurrentUser();
         // pegando o uid do usuário logado
         String uid = user.getUid();
 
-        // variaveis de entrada
-        String nome = edtNome.getText().toString();
-        String sexo = edtSexo.getText().toString();
-        String idade = edtData.getText().toString();
-
-
-
+        // referencia do /aluno nome do banco
+        alunos = database.getReference("Alunos");
         // pegando o uid do usuario
-        alunos.child(uid).child("idade").setValue(idade);
         alunos.child(uid).child("nome").setValue(nome);
         alunos.child(uid).child("sexo").setValue(sexo);
+        alunos.child(uid).child("idade").setValue(idade);
     }
 }
