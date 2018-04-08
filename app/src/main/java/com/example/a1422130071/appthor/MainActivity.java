@@ -7,6 +7,7 @@ package com.example.a1422130071.appthor;
         import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
+        import android.widget.TextView;
         import android.widget.Toast;
 
         import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,12 +19,13 @@ package com.example.a1422130071.appthor;
 
 public class MainActivity extends AppCompatActivity {
     Button btnLogin ;
-
+    TextView txtCadastrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        txtCadastrar = findViewById(R.id.txtCadastrar);
         btnLogin= findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,11 +33,18 @@ public class MainActivity extends AppCompatActivity {
                 login();
             }
         });
-
-
         FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         FirebaseUser user = auth.getCurrentUser();
+
+        txtCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(MainActivity.this, CreateUser.class);
+                startActivity(it);
+            }
+        });
+
 
         if (user!= null){
             Intent it = new Intent(MainActivity.this, Main2Activity.class);

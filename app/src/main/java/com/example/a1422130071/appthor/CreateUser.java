@@ -50,7 +50,11 @@ public class CreateUser extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(email,senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                Toast.makeText(CreateUser.this,"Sucesso no registro",Toast.LENGTH_SHORT).show();
+                if(task.isSuccessful()) {
+                    Toast.makeText(CreateUser.this, "Sucesso no registro", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(CreateUser.this, "Algo deu errado", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
