@@ -46,12 +46,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // se o usuario ja estiver autenticado, ele entrará direto na activity 2
-        /*if (user!= null){
+        if (user!= null){
             Intent it = new Intent(MainActivity.this, Main2Activity.class);
             startActivity(it);
             finish();
         }
-        */
+
     }
 
     public void login(){

@@ -1,4 +1,4 @@
-#Sun Apr 08 16:50:13 BRT 2018
+#Sun Apr 08 17:20:50 BRT 2018
 base.0=C\:\\Users\\gabriel\\Desktop\\AppThor\\AppThor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4
 path.0=classes.dex
 renamed.0=classes.dex
