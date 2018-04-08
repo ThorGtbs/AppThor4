@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "73065075764",
+    "firebase_url": "https://gabrielmarcodispmoveis.firebaseio.com",
+    "project_id": "gabrielmarcodispmoveis",
+    "storage_bucket": "gabrielmarcodispmoveis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73065075764:android:70cbe02f0963389f",
+        "android_client_info": {
+          "package_name": "com.example.a1422130071.appthor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73065075764-4vtru0f27csm0akb11eabst5isg935qh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbbuWmHFc3G9JzKBrlzrDwUgvP-whgM-g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
