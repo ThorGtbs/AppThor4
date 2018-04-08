@@ -45,20 +45,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        if (user!= null){
+        // se o usuario ja estiver autenticado, ele entrará direto na activity 2
+        /*if (user!= null){
             Intent it = new Intent(MainActivity.this, Main2Activity.class);
             startActivity(it);
             finish();
         }
+        */
     }
 
     public void login(){
+        // Verifica recebe a instancia do autenticação
         FirebaseAuth auth = FirebaseAuth.getInstance();
         EditText edtEmail = findViewById(R.id.edtEmail);
         EditText edtSenha = findViewById(R.id.edtSenha);
 
-
+        // Passa, no auth, os argumentos referentes aos dados do usuario.
+        // Retornando o resultado da autenticação.
         Task<AuthResult> processo = auth.signInWithEmailAndPassword(edtEmail.getText().toString(),edtSenha.getText().toString());
         processo.addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override

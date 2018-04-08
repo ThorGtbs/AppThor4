@@ -14,21 +14,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "C:\\Users\\1422130071\\AndroidStudioProjects\\AppThor\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\1422130071\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\112d3fde21eb5a7bf6498ab63ba3b3a8\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                }
-            ]
         }
     ]
 }

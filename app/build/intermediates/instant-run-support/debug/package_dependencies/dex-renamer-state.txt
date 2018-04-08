@@ -1,4 +1,4 @@
-#Wed Mar 14 21:14:04 BRT 2018
-base.0=C\:\\Users\\1422130071\\AndroidStudioProjects\\AppThor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+#Sun Apr 08 15:07:38 BRT 2018
+base.0=C\:\\Users\\gabriel\\Desktop\\AppThor\\AppThor\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
 path.0=classes.dex
 renamed.0=classes.dex
